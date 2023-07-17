@@ -1,0 +1,56 @@
+<section class="bg-height">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 px-0 d-none d-sm-block h-100">
+        <div class="m-4">
+          <img src="../../../assets/logo.png">
+        </div>
+      </div>
+      <div class="col-sm-4 text-black h-100 pt-5">
+        <div class="empty"></div>
+        <div class="px-3 ms-xl-4 mt-5 pt-5 ">
+          <span class="d-block bold">Create account</span>
+          <span class="d-block light mt-1">Welcome to designoo media. You are new here. Set up your account as
+            Photographer or Customer.</span>
+
+
+          <div class="d-flex  radio mt-2 p-2" [ngClass]="{'selected':userType=='photographer'}">
+            <label class="box_container_radio">
+              <input type="radio" name="userType" class="mr-2" value="customer" (click)="setUserType('photographer')">
+              <span class="radiomark"></span>
+            </label>
+            <div class="text-center iconDiv" [ngClass]="{'disabled':userType!='photographer'}"> <i
+                class="fa fa-icon fa-camera"></i></div>
+            <label class="light" for="userType">I am a photographer, delivering and sharing photos/videos to
+              customers.</label>
+          </div>
+          <div class="d-flex radio mt-2 p-2" [ngClass]="{'selected':userType=='customer'}">
+            <label class="box_container_radio">
+              <input type="radio" name="userType" class="mr-2" value="customer" (click)="setUserType('customer')">
+              <span class="radiomark"></span>
+            </label>
+
+            <div class="text-center iconDiv" [ngClass]="{'disabled':userType!='customer'}"> <i
+                class="fa fa-icon fa-user"></i></div>
+
+            <label class="light" for="userType">I am a customer, viewing, uploading and downloading photos/videos of my
+              event.</label>
+          </div>
+          <div class="d-flex">
+            <button class="signin py-2 mt-4" [disabled]="!userType" (click)="signUp()">Continue</button>
+          </div>
+
+          <div class="text-center mt-3">
+            <span class="light">Already have an account? </span>
+            <a class="link signup" href="javascript:void(0)" (click)="signIn()">Sign In</a>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+.scroll-box{
+  height: 93vh;
+  overflow-y: scroll;
+  background: #00000022;
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

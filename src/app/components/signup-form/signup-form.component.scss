@@ -1,0 +1,37 @@
+
+
+  .overlay{
+    display: none;
+    width: 100%;
+    height: 100% !important;
+    background-color: #66666655;
+    position: absolute;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal_popup{
+    background-color: white;
+    position: relative;
+    display: inline-grid;
+    padding: 20px;
+    text-align: center;
+    height: fit-content;
+
+  }
+
+  .verify_button{
+    margin: auto;
+    width: fit-content;
+    color: #AE6ECF;
+    background-color: white;
+    border: 1px solid #AE6ECF;
+    border-radius:5px;
+
+  }
+  .close_icon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }

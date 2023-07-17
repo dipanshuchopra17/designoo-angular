@@ -1,0 +1,80 @@
+<section class="bg-height">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 px-0 d-none d-sm-block h-100">
+        <div class="m-4">
+          <img src="../../../assets/logo.png">
+        </div>
+      </div>
+      <div class="col-sm-4 text-black h-100 pt-3">
+        <div class="px-3 ms-xl-4 mt-5 pt-5 ">
+          <span class="d-block bold">Create Account</span>
+          <span class="d-block light">Be a part of photographer's community.</span>
+          <form [formGroup]="signupForm">
+            <div class="container-fluid">
+              <div class="row mt-3">
+                <div class="px-0 mr-2 col-md-6">
+                  <label class="small" for="">First name</label>
+                  <input type="text" class="form-control py-2" name="" formControlName="fname"
+                    placeholder="Enter first name" id="">
+                </div>
+                <div class="px-0 ml-2 col-md-6">
+                  <label class="small" for="">Last name</label>
+                  <input type="text" class="form-control py-2" name="" formControlName="lname"
+                    placeholder="Enter last name" id="">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="px-0 col-sm-12">
+                  <label class="small" for="">Company name ( Optional )</label>
+                  <input type="text" class="form-control py-2" name="" formControlName="companyname"
+                    placeholder="Ex. Design Studio" id="">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="px-0 col-sm-12">
+                  <label class="small" for="">Company Email</label>
+                  <input type="email" class="form-control py-2" formControlName="email"
+                    placeholder="Ex. info@domain.com" name="" id="">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <label class="small" for="">Phone number</label>
+                <div class="px-0 col-sm-2">
+                  <input type="text" class="form-control py-2" formControlName="countrycode" placeholder="+91" name=""
+                    id="">
+                </div>
+                <div class="px-0 col-sm-10">
+                  <input type="number" class="form-control py-2" formControlName="number" placeholder="9876543210"
+                    name="" id="">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <button class="signin py-2" (click)="submitForm()" [disabled]="!signupForm.valid">Continue</button>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="overlay">
+
+    <div class="modal_popup p-5">
+      <i class="fa fa-close close_icon" (click)="closePopup()"></i>
+      <img src="../../../assets/mail_icon.png" class="p-2 m-auto" alt="">
+      <span class="bold">Check your email</span>
+      <span class="small">We have sent the verification email to </span>
+      <span class="light">{{signupForm?.value?.email}}</span>
+      <button class="small verify_button px-2 py-1 mt-2">Verify email address</button>
+    </div>
+
+</div>

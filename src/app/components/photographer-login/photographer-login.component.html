@@ -1,0 +1,68 @@
+<section class="bg-height">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 px-0 d-none d-sm-block h-100">
+        <div class="m-4">
+          <img src="../../../assets/logo.png">
+        </div>
+      </div>
+      <div class="col-sm-4 text-black h-100 pt-3">
+        <div class="px-3 ms-xl-4 mt-5 pt-5 ">
+          <span class="d-block bold">Welcome back</span>
+          <span class="d-block light">Please enter your credentials to login</span>
+        </div>
+
+        <form [formGroup]="form">
+
+
+          <div class="d-flex flex-column px-3 ms-xl-4 mt-2 pt-2">
+            <div class="form-outline mb-3">
+              <label class="form-label small" for="email">Email address</label>
+              <input type="email" id="form2Example18" formControlName="email" placeholder="ex. johndoe@domain.com"
+                class="form-control form-control-lg" />
+            </div>
+            <div class="form-outline mb-3">
+              <label class="form-label small" for="password">Password</label>
+              <div class="input-div">
+                <input type="password" id="passwordInput" formControlName="password" placeholder="* * * * * * * *"
+                  class="form-control form-control-lg" />
+                <i class="input-icon p-3 fa" [ngClass]="{'fa-eye': !showPassword,'fa-eye-slash':showPassword}"
+                  (click)="togglePassword()"></i>
+              </div>
+            </div>
+
+            <div class="form-outline mb-4 d-flex justify-content-between">
+              <div>
+                <label class="box_container">
+                  <input type="checkbox" name="remember_me" id="" value="Remember me" class="pr-2">
+                  <span class="checkmark"></span>
+                  <span class="light" style="margin-left: 5px;">Remember me</span>
+                </label>
+              </div>
+              <div> <a class="link">Forgot Password</a>
+              </div>
+
+            </div>
+
+            <button class="signin py-2 mb-2" [disabled]="!form.valid" (click)="signIn()">Sign in</button>
+            <button class="google-signin py-2">
+              <img src="../../../assets/google.png" width="20" height="20" alt="">
+              Sign in with Google
+            </button>
+
+
+            <div class="text-center mt-3">
+              <span class="light">Don't have an account? </span>
+              <a class="link signup" href="javascript:void(0)" (click)="signUp()">Sign Up</a>
+
+            </div>
+
+
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</section>
